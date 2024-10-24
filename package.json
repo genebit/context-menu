@@ -1,0 +1,24 @@
+{
+    "name": "context-menu",
+    "version": "1.0.0",
+    "main": "index.html",
+    "scripts": {
+        "watch": "tailwindcss -i src/style.css -o dist/style.css --watch",
+        "watch:js": "esbuild src/script.js --bundle --outfile=dist/script.js --watch",
+        "dev": "live-server --watch=index.html,src,dist",
+        "start": "concurrently \"npm run watch\" \"npm run watch:js\" \"npm run dev\"",
+        "build:js": "esbuild src/script.js --bundle --minify --outfile=dist/script.js",
+        "build:css": "tailwindcss -i src/style.css -o dist/style.css --minify",
+        "build:min": "esbuild dist/style.css --minify --outfile=dist/style.min.css",
+        "build": "npm run build:js && npm run build:css && npm run build:min"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "concurrently": "^9.0.1",
+        "esbuild": "^0.24.0",
+        "tailwindcss": "^3.4.14"
+    }
+}
