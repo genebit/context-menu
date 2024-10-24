@@ -5,31 +5,43 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Sandbox</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.4.0/remixicon.min.css" integrity="sha512-6sfYTBLNjOZhwJ5g/J0529qHqIdXxO1BycUHd1LIJjEzVCzX8cHtoXDgd+ylrqCl/OZM/RMDgkn2Dd41lJsJjw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href="./dist/style.css" rel="stylesheet" />
         <script src="./dist/script.js"></script>
     </head>
     <body>
         <main class="tw-container tw-mx-auto">
             <h1 class="tw-text-4xl tw-text-center tw-mt-20 tw-mb-5 tw-font-bold">Custom Context Menu + Tailwind CSS</h1>
-            <div class="tw-flex tw-gap-10">
+            <section class="tw-flex tw-gap-10">
                 <div class="tw-shadow-lg tw-shadow-slate-200 tw-bg-white tw-rounded-md tw-basis-full">
                     <div class="tw-border-1 tw-border tw-border-dashed tw-h-20 tw-border-slate-400 tw-flex tw-justify-center tw-items-center context-menu-toggler">
-                        Right Click Me!
+                        <div>
+                            <h6 class="tw-font-medium">Context Menu Trigger</h6>
+                            <small class="tw-italic">Normal menu</small>
+                        </div>
                         <div class="context-menu tw-hidden tw-absolute tw-bg-white tw-shadow-lg tw-shadow-slate-200 tw-border-1 tw-border tw-rounded-md tw-min-w-52 tw-max-w-96">
-                            <div class="tw-p-2 tw-font-bold">Context Menu 1</div>
-                            <hr />
+                            <header>
+                                <div class="tw-p-2 tw-text-sm tw-font-bold tw-truncate">Normal Context Menu</div>
+                                <hr class="tw-opacity-15" />
+                            </header>
                             <div class="tw-p-2 tw-flex tw-flex-col tw-gap-1 *:tw-px-2 *:tw-py-1 *:tw-text-sm *:tw-rounded-md *:tw-cursor-pointer">
                                 <div class="hover:tw-bg-slate-200 tw-flex tw-justify-between">
-                                    <span>Copy</span>
-                                    <span class="tw-text-xs tw-bg-slate-200 tw-opacity-50 tw-px-2 tw-py-1 tw-rounded-md">Ctrl + C</span>
+                                    <span>
+                                        <i class="ri-square-line tw-invisible"></i>
+                                        Undo
+                                    </span>
                                 </div>
                                 <div class="hover:tw-bg-slate-200 tw-flex tw-justify-between">
-                                    <span>Paste</span>
-                                    <span class="tw-text-xs tw-bg-slate-200 tw-opacity-50 tw-px-2 tw-py-1 tw-rounded-md">Ctrl + V</span>
+                                    <span>
+                                        <i class="ri-square-line tw-invisible"></i>
+                                        Redo
+                                    </span>
                                 </div>
                                 <div class="hover:tw-bg-slate-200 tw-flex tw-justify-between">
-                                    <span>New Folder</span>
-                                    <span class="tw-text-xs tw-bg-slate-200 tw-opacity-50 tw-px-2 tw-py-1 tw-rounded-md">Ctrl + N</span>
+                                    <span>
+                                        <i class="ri-square-line tw-invisible"></i>
+                                        Refresh
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -37,22 +49,110 @@
                 </div>
                 <div class="tw-shadow-lg tw-shadow-slate-200 tw-bg-white tw-rounded-md tw-basis-full">
                     <div class="tw-border-1 tw-border tw-border-dashed tw-h-20 tw-border-slate-400 tw-flex tw-justify-center tw-items-center context-menu-toggler">
-                        Right Click Me!
+                        <div>
+                            <h6 class="tw-font-medium">Context Menu Trigger</h6>
+                            <small class="tw-italic">Normal menu with Icons</small>
+                        </div>
                         <div class="context-menu tw-hidden tw-absolute tw-bg-white tw-shadow-lg tw-shadow-slate-200 tw-border-1 tw-border tw-rounded-md tw-min-w-52 tw-max-w-96">
-                            <div class="tw-p-2 tw-font-bold">Context Menu 2</div>
-                            <hr />
+                            <header>
+                                <div class="tw-p-2 tw-text-sm tw-font-bold tw-truncate">Context Menu with Icons</div>
+                                <hr class="tw-opacity-15" />
+                            </header>
                             <div class="tw-p-2 tw-flex tw-flex-col tw-gap-1 *:tw-px-2 *:tw-py-1 *:tw-text-sm *:tw-rounded-md *:tw-cursor-pointer">
                                 <div class="hover:tw-bg-slate-200 tw-flex tw-justify-between">
-                                    <span>Open in Terminal</span>
+                                    <span>
+                                        <i class="ri-square-line tw-invisible"></i>
+                                        Copy
+                                    </span>
+                                    <span class="tw-text-xs tw-bg-slate-200 tw-opacity-50 tw-px-2 tw-py-0.5 tw-rounded-md">Ctrl + C</span>
                                 </div>
                                 <div class="hover:tw-bg-slate-200 tw-flex tw-justify-between">
-                                    <span>Refresh</span>
+                                    <span>
+                                        <i class="ri-square-line tw-invisible"></i>
+                                        Paste
+                                    </span>
+                                    <span class="tw-text-xs tw-bg-slate-200 tw-opacity-50 tw-px-2 tw-py-0.5 tw-rounded-md">Ctrl + V</span>
+                                </div>
+                                <div class="hover:tw-bg-slate-200 tw-flex tw-justify-between">
+                                    <span>
+                                        <i class="ri-square-line tw-invisible"></i>
+                                        New Folder
+                                    </span>
+                                    <span class="tw-text-xs tw-bg-slate-200 tw-opacity-50 tw-px-2 tw-py-0.5 tw-rounded-md">Ctrl + N</span>
+                                </div>
+                            </div>
+                            <hr class="tw-opacity-15" />
+                            <div class="tw-p-2 tw-flex tw-flex-col tw-gap-1 *:tw-px-2 *:tw-py-1 *:tw-text-sm *:tw-rounded-md *:tw-cursor-pointer">
+                                <div class="hover:tw-bg-slate-200 tw-flex tw-justify-between">
+                                    <span>
+                                        <i class="ri-github-fill"></i>
+                                        Open with Git
+                                    </span>
+                                </div>
+                                <div class="hover:tw-bg-slate-200 tw-flex tw-justify-between">
+                                    <span>
+                                        <i class="ri-terminal-box-fill"></i>
+                                        Open with Terminal
+                                    </span>
+                                </div>
+                            </div>
+                            <hr class="tw-opacity-15" />
+                            <div class="tw-p-2 tw-flex tw-flex-col tw-gap-1 *:tw-px-2 *:tw-py-1 *:tw-text-sm *:tw-rounded-md *:tw-cursor-pointer">
+                                <div class="hover:tw-bg-slate-200 tw-flex tw-justify-between">
+                                    <span>
+                                        <i class="ri-tv-2-line"></i>
+                                        Display Settings
+                                    </span>
+                                </div>
+                                <div class="hover:tw-bg-slate-200 tw-flex tw-justify-between">
+                                    <span>
+                                        <i class="ri-palette-line"></i>
+                                        Personalize
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="tw-shadow-lg tw-shadow-slate-200 tw-bg-white tw-rounded-md tw-basis-full">
+                    <div class="tw-border-1 tw-border tw-border-dashed tw-h-20 tw-border-slate-400 tw-flex tw-justify-center tw-items-center context-menu-toggler">
+                        <div>
+                            <h6 class="tw-font-medium">Context Menu Trigger</h6>
+                            <small class="tw-italic">Normal menu with Multi-Dropdown</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="tw-mt-10">
+                <div class="tw-p-4 tw-mb-4 tw-text-sm tw-text-blue-800 tw-rounded-lg tw-bg-blue-50" role="alert">Right click on each row to see the context menu.</div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>Employee Name</th>
+                            <th>Employee Salary</th>
+                            <th>Contact Email</th>
+                            <th>Contact Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HR2021-040412</td>
+                            <td>John Doe</td>
+                            <td>10,000.00</td>
+                            <td>email@gmail.com</td>
+                            <td>09700005532</td>
+                        </tr>
+                        <tr>
+                            <td>HR2021-040413</td>
+                            <td>Jane Doe</td>
+                            <td>15,000.00</td>
+                            <td>email@gmail.com</td>
+                            <td>09700540221</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </main>
     </body>
 </html>
