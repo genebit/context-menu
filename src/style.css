@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.context-menu-toggler .context-menu {
+    @apply tw-absolute tw-bg-white tw-shadow-lg tw-shadow-slate-200 tw-border tw-rounded-md tw-min-w-52 tw-max-w-96;
+}
+
+.context-menu-toggler .context-menu .context-menu-item-container {
+    @apply tw-p-2 tw-flex tw-flex-col tw-gap-1 *:tw-px-2 *:tw-py-1 *:tw-text-sm *:tw-rounded-md *:tw-cursor-pointer *:tw-flex *:tw-justify-between hover:*:tw-bg-slate-200;
+}
+
+.context-menu-toggler .context-menu .context-menu-item-divider {
+    @apply tw-border-b-[1px] tw-border-solid tw-border-slate-200;
+}
+
+.context-menu-toggler .context-menu .context-menu-heading {
+    @apply tw-p-2 tw-text-sm tw-font-bold tw-truncate;
+}
+
+.context-menu-toggler .context-menu .context-menu-prefix-icon {
+    @apply tw-me-0.5;
+}
